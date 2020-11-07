@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate')%>
+
+<main>
+    <div class="centered">
+        <div>
+    <h1> what are you grateful for?</h1>
+    <form action='/gratitude' method='POST'>
+    <input name ='gratitude[thought]' type='text'>
+    <button type='submit'>submit</button>
+    </form>
+
+    <h1>People are grateful for:</h1>
+    <% for (let thought of gratitude){ %> 
+        <li> <%= thought.thought %></li>
+    <% } %>
+</div></div>
+</main>
